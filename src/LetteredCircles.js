@@ -1,8 +1,8 @@
 $( document ).ready(function() {
-  $('#LCcanvas').attr('height', $('#LCcanvas').css('height'));
-  $('#LCcanvas').attr('width', $('#LCcanvas').css('width'));
+  $('#LC_canvas').attr('height', $('#LC_canvas').css('height'));
+  $('#LC_canvas').attr('width', $('#LC_canvas').css('width'));
     
-  $("#LCcanvas").click(function(page){
+  $("#LC_canvas").click(function(page){
     var x = page.pageX - this.offsetLeft;
     var y = page.pageY - this.offsetTop;
     $('#coordinates').html(x +', '+ y);
