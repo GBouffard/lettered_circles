@@ -12,6 +12,12 @@ $( document ).ready(function() {
     ctx.arc(x, y, 25,0, 2*Math.PI);
     ctx.fillStyle = "#FF0000";
     ctx.fill();
+
+    var fullText = $('#myText').val();
+    var letter = fullText.charAt(0);
+    ctx.fillStyle = "#000000";
+    ctx.font="30px Verdana";
+    ctx.fillText(letter, x-10 ,y+10);    
     ctx.stroke();
   });
 });

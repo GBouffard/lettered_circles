@@ -34,10 +34,16 @@ describe('LetteredCircles', function() {
       expect($("#myText")).toBeEmpty();
     });
 
-    xit('recognizes when a text has been entered in the typeable area', function(){
+    it('recognizes when a text is present in the typeable area', function(){
+      $("#myText").text("Hello world!");
+      expect($("#myText")).not.toBeEmpty();
     });
 
     xit('outputs the first character from the typeable area in a circle wherever a user clicks on the canvas', function(){
+      $("#myText").text("Hello world!");
+      $('#LC_canvas').click();
+      // the test I'm trying to achieve is something like: expect('#LC_canvas').toHaveText('H');
+      // I found some dicussions around canvas interactions JavaScript Testing on StacKoverflow & Google but no clear solutions to solve such tests.
     });
 
     xit('removes the first letter from the typeable area when a click on the canvas has happened', function(){
