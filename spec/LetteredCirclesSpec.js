@@ -21,7 +21,11 @@ describe('LetteredCircles', function() {
       expect("#coordinates").not.toHaveText('Last mouse pointer position (for testing purposes): none');
     });
 
-    xit('triggers the circle drawing method wherever a user clicks on the canvas', function(){
+    it('triggers the circle drawing method wherever a user clicks on the canvas', function(){
+      // I wanted at first to test the presence of the red colour (colour of my circles) in the canvas after click but had to find another way:
+      var spyEvent = spyOnEvent('#LCcanvas', 'click')
+      $('#LCcanvas').click();
+      expect(spyEvent).toHaveBeenTriggered();
     });
   });
 
