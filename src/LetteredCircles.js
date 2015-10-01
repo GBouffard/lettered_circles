@@ -19,5 +19,7 @@ $( document ).ready(function() {
     ctx.font="30px Verdana";
     ctx.fillText(letter, x-10 ,y+10);    
     ctx.stroke();
+
+    $('#myText').val(fullText.substring(1));
   });
 });
