@@ -6,7 +6,8 @@ describe('LetteredCircles', function() {
   });
 
   describe('Stage 1: Make circles', function() {
-    xit('has no initial mouse pointer position when it opens', function(){
+    it('has no initial mouse pointer position when it opens', function(){
+      expect("#coordinates").toHaveText('Last mouse pointer position (for testing purposes): none');
     });
 
     xit('has no circles already positionned on the page when it opens', function(){
