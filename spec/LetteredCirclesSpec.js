@@ -10,7 +10,8 @@ describe('LetteredCircles', function() {
       expect("#coordinates").toHaveText('Last mouse pointer position (for testing purposes): none');
     });
 
-    xit('has no circles already positionned on the page when it opens', function(){
+    it('has no circles already positionned on the page when it opens', function(){
+      expect('#LCcanvas').toBeEmpty();
     });
 
     xit('knows and shows the X and Y coordinates of the mouse pointer when clicked', function(){
