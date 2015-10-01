@@ -14,7 +14,11 @@ describe('LetteredCircles', function() {
       expect('#LCcanvas').toBeEmpty();
     });
 
-    xit('knows and shows the X and Y coordinates of the mouse pointer when clicked', function(){
+    it('knows and shows the X and Y coordinates of the mouse pointer when clicked', function(){
+      // nb: I searched and found out that the mouse position cannot be set, which didnt help my test.
+      $('#LCcanvas').click();
+      // expect("#coordinates").toHaveText('0, 0'); didnt work either while it appears in the browser so I tested this instead:
+      expect("#coordinates").not.toHaveText('Last mouse pointer position (for testing purposes): none');
     });
 
     xit('triggers the circle drawing method wherever a user clicks on the canvas', function(){
